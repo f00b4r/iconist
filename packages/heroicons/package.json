@@ -1,0 +1,7 @@
+{
+  "name": "@obr/heroicons",
+  "version": "0.0.1",
+  "files": [
+    "dist/**/*.svg"
+  ]
+}
