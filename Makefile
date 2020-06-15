@@ -165,3 +165,15 @@ ikonate-build:
 ikonate-publish:
 	cd packages/ikonate && \
 	npm publish --access public --tag latest ${NPM_DRY}
+
+##################################################
+# MACMOJI ########################################
+##################################################
+
+macmoji-build:
+	cd packages/macmoji && npm install
+	mkdir -p packages/macmoji/dist || true
+
+macmoji-publish:
+	cd packages/macmoji && \
+	npm publish --access public --tag latest ${NPM_DRY}
