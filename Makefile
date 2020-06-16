@@ -176,4 +176,4 @@ macmoji-build:
 
 macmoji-publish:
 	cd packages/macmoji && \
-	npm publish --access public --tag latest ${NPM_DRY}
+	npm publish --access public --tag latest -timeout=9999999 ${NPM_DRY}
