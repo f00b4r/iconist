@@ -177,3 +177,16 @@ macmoji-build:
 macmoji-publish:
 	cd packages/macmoji && \
 	npm publish --access public --tag latest -timeout=9999999 ${NPM_DRY}
+
+##################################################
+# SVGPORN ########################################
+##################################################
+
+svgporn-build:
+	git clone --depth 1 https://github.com/gilbarbara/logos tmp/svgporn || true
+	mkdir -p packages/svgporn/dist || true
+	cp -R tmp/svgporn/logos/ packages/svgporn/dist
+
+svgporn-publish:
+	cd packages/svgporn && \
+	npm publish --access public --tag latest -timeout=9999999 ${NPM_DRY}
