@@ -190,3 +190,16 @@ svgporn-build:
 svgporn-publish:
 	cd packages/svgporn && \
 	npm publish --access public --tag latest -timeout=9999999 ${NPM_DRY}
+
+##################################################
+# HEALTHICONS ####################################
+##################################################
+
+healthicons-build:
+	git clone --depth 1 https://github.com/resolvetosavelives/healthicons tmp/healthicons || true
+	mkdir -p packages/healthicons/dist || true
+	cp -R tmp/healthicons/public/icons/svg/ packages/healthicons/dist
+
+healthicons-publish:
+	cd packages/healthicons && \
+	npm publish --access public --tag latest -timeout=9999999 ${NPM_DRY}
